@@ -2,13 +2,14 @@
   import clsx from "@/helpers";
 
   export let state: "solid" | "outline" | "ghost" | "soft" | "white" | "link" =
-    "outline";
-  export let size: "small" | "medium" | "large" = "medium";
+    "white";
+  export let size: "smaller" | "small" | "medium" | "large" = "medium";
   export let label: string = "";
   export let loading: boolean = false;
   export let disabled: boolean = false;
   // Use **shrink** when button contains only icon
   export let width: "shrink" | "full" | "default" = "default";
+  export let dataHsRemoveElement: string = "";
 
   const btnCommonStyles =
     "inline-flex justify-center items-center gap-2 rounded-md font-semibold transition-all text-sm focus:ring-2 focus:ring-offset-2";
@@ -41,12 +42,14 @@
   ]);
 
   const buttonSize = new Map([
+    ["smaller", "py-1 px-2 text-xs"],
     ["small", "py-2 px-3"],
     ["medium", "py-3 px-4"],
     ["large", "py-3 px-4 sm:!p-5"],
   ]);
 
   const buttonShrinkSize = new Map([
+    ["smaller", "h-[1.375rem] w-[1.375rem]"],
     ["small", "h-[2.375rem] w-[2.375rem]"],
     ["medium", "h-[2.875rem] w-[2.875rem]"],
     ["large", "h-[3.875rem] w-[3.875rem]"],
@@ -68,6 +71,7 @@
     (disabled || loading) && "cursor-not-allowed"
   )}
   disabled={disabled || loading}
+  data-hs-remove-element={dataHsRemoveElement}
   on:click
 >
   {#if loading}

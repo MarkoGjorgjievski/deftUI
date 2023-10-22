@@ -10,7 +10,7 @@ const meta = {
   argTypes: {
     size: {
       control: { type: "select" },
-      options: ["small", "medium", "large"],
+      options: ["smaller", "small", "medium", "large"],
     },
     state: {
       control: { type: "select" },
@@ -32,8 +32,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/svelte/writing-stories/args
-
 const label = "Button";
 
 export const Large: Story = {
@@ -53,6 +51,13 @@ export const Medium: Story = {
 export const Small: Story = {
   args: {
     size: "small",
+    label,
+  },
+};
+
+export const Smaller: Story = {
+  args: {
+    size: "smaller",
     label,
   },
 };
@@ -101,7 +106,8 @@ export const Link: Story = {
 
 export const Shrink: Story = {
   args: {
-    label,
+    label: "👍",
+    size: "small",
     width: "shrink",
   },
 };
@@ -123,6 +129,6 @@ export const Disabled: Story = {
 export const Loading: Story = {
   args: {
     label,
-    loading: false,
+    loading: true,
   },
 };

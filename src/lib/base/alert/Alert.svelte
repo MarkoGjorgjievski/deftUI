@@ -19,6 +19,7 @@
   export let dismissable: boolean = false;
   // always pass ID when alert is dismissable
   export let id: string = "";
+  export let onDismissClick: () => unknown | null = () => null;
 
   const commonAlertStyles = "text-sm p-4 rounded-md";
   const dismissStyles =
@@ -136,6 +137,7 @@
             state="ghost"
             size="smaller"
             dataHsRemoveElement="#{id}"
+            on:click={onDismissClick}
           >
             <span slot="iconStart"
               ><i

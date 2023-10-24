@@ -32,9 +32,7 @@
     ],
   ]);
 
-  const buttonVariant = new Map([
-    
-  ])
+  const buttonVariant = new Map([]);
 
   const buttonSize = new Map([
     ["smaller", "py-1 px-2 text-xs"],
@@ -56,19 +54,7 @@
   ]);
 </script>
 
-<button
-  type="button"
-  class={clsx(
-    btnCommonStyles,
-    buttonState.get(state),
-    width === "shrink" ? buttonShrinkSize.get(size) : buttonSize.get(size),
-    buttonWidth.get(width),
-    (disabled || loading) && "cursor-not-allowed"
-  )}
-  disabled={disabled || loading}
-  data-hs-remove-element={dataHsRemoveElement}
-  on:click
->
+<button on:click>
   {#if loading}
     <span class="sr-only">Loading...</span>
     <span

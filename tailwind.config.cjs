@@ -1,5 +1,3 @@
-import { corePresets } from "storybook-builder-vite";
-
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
 
@@ -33,8 +31,14 @@ export default {
         "danger-soft": colors.red[100],
         "danger-content": colors.white,
         "danger-focus": colors.red[600],
+        base: "rgb(var(--base) / <alpha-value>)",
         "base-100": "rgb(var(--base-100) / <alpha-value>)",
-        ...colors,
+        "base-200": "rgb(var(--base-200) / <alpha-value>)",
+        "base-300": "rgb(var(--base-300) / <alpha-value>)",
+        "base-content": "rgb(var(--base-content) / <alpha-value>)",
+      },
+      borderColor: {
+        border: "rgb(var(--base-200) / <alpha-value>)",
       },
     },
     fontFamily: {

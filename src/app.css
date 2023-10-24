@@ -31,36 +31,32 @@
     --color-danger-content: theme("colors.white");
     --color-danger-focus: theme("colors.red.600");
 
-    /* --color-neutral: theme("colors.white");
-    --color-neutral-content: theme("colors.gray.700");
-    --color-neutral-focus: theme("colors.gray.50"); */
-    --base-100: 255 115 179;
+    --base-100: 249 250 251; /* gray  50 */
+    --base-200: 229 231 235; /* gray  200 */
+    --base-300: 209 213 219; /* gray  300 */
+    --base-content: 75 85 99;
 
-    /* --base-100: theme("colors.white");
-      --base-200: theme("colors.gray.100");
-      --base-300: theme("colors.gray.200");
-      --base-content: theme("colors.gray.700"); */
+    /* --check1: rgb(249, 250, 251);  gray  50 */
+    /* --check2: rgb(243, 244, 246);  gray 100 */
+    /* --check2: rgb(229, 231, 235);  gray 200 */
+    /* --check2: rgb(209, 213, 219);  gray 300 */
   }
+
   html[class="dark"] {
-    --base-100: 255 39 49;
-    --base-content: theme("colors.white");
+    --base: 15 23 42; /* slate-900*/
+    --base-100: 30 41 59; /* slate-800 */
+    --base-200: 51 65 85; /* slate-700 */
+    --base-300: 71 85 105; /* slate-600 */
+    --base-content: 255 255 255;
+  }
+
+  html {
+    @apply bg-base;
   }
 }
 
-/* body {
-  @apply dark:bg-slate-900;
-} */
-
-/* inline-flex justify-center items-center gap-2 rounded-md font-semibold transition-all text-sm focus:ring-2 focus:ring-offset-2 */
-
-/* @layer components {
+@layer components {
   .btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2;
-    transition: all;
-    border-radius: theme("borderRadius.md");
-    font-weight: theme("fontWeight.semibold");
+    @apply inline-flex justify-center items-center gap-2 rounded-md font-semibold transition-all duration-300 border border-transparent text-sm focus:ring-2 focus:ring-offset-2 focus:outline-none py-3 px-4;
   }
-} */
+}

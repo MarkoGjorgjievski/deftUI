@@ -6,26 +6,39 @@
 
 <ThemeSwitcher />
 
-<div class="p-8">
-  <Button size="smaller" label="Button" state="white" />
+<div class="p-3 m-3 text-base-content border">
+  <div>base</div>
 </div>
 
-<div class="p-8">
-  <Alert type="discovery" state="soft" dismissable icon id="dismiss-alert" />
+<div class="p-3 m-3 bg-base-100 text-base-content border border-base-300">
+  <div>base-100</div>
 </div>
 
-<div class="p-3 m-3 bg-danger-soft text-danger border-danger border">
-  <div>Hello</div>
+<div class="p-3 m-3 bg-base-200 text-base-content">
+  <div>base-200</div>
 </div>
 
-<div class="p-3 m-3 bg-warning-soft text-warning border-warning border">
-  <div>Hello</div>
+<div class="p-3 m-3 bg-base-300 text-base-content">
+  <div>base-300</div>
+</div>
+<div class="flex gap-2 p-3">
+  <button class="btn bg-primary text-primary-content focus:ring-offset-primary"
+    >Button</button
+  >
+  <button class="btn bg-info text-primary-content">Button</button>
+  <button class="btn bg-success text-primary-content">Button</button>
+  <button class="btn bg-warning text-primary-content">Button</button>
+  <button class="btn bg-danger text-primary-content">Button</button>
+  <button class="btn bg-base border border-base-200 text-base-content shadow-sm"
+    >Button</button
+  >
 </div>
 
-<div class="p-3 m-3 bg-success-soft text-success border-success border">
-  <div>Hello</div>
-</div>
-
-<div class="p-3 m-3 bg-base-100 text-info border-info border">
-  <div>Hello</div>
+<div class="flex gap-2 p-3">
+  <button class="btn bg-primary-soft text-primary">Button</button>
+  <button class="btn bg-info-soft text-info">Button</button>
+  <button class="btn bg-success-soft text-success">Button</button>
+  <button class="btn bg-warning-soft text-warning">Button</button>
+  <button class="btn bg-danger-soft text-danger">Button</button>
+  <button class="btn bg-base-100 text-base-content">Button</button>
 </div>

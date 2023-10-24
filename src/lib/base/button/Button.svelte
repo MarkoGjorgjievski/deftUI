@@ -10,36 +10,31 @@
   // Use **shrink** when button contains only icon
   export let width: "shrink" | "full" | "default" = "default";
   export let dataHsRemoveElement: string = "";
+  export let variant:
+    | "dark"
+    | "secondary"
+    | "info"
+    | "success"
+    | "danger"
+    | "warning"
+    | "primary"
+    | "neutral" = "primary";
 
   const btnCommonStyles =
-    "inline-flex justify-center items-center gap-2 rounded-md font-semibold transition-all text-sm focus:ring-2 focus:ring-offset-2";
+    "inline-flex justify-center items-center gap-2 rounded-md font-semibold transition-all border border-transparent text-sm focus:ring-2 focus:ring-offset-2 focus:outline-none";
 
   const buttonState = new Map([
-    [
-      "solid",
-      "border border-transparent bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-blue-500 dark:focus:ring-offset-gray-800",
-    ],
-    [
-      "outline",
-      "!py-[.688rem] border-2 border-gray-200 text-blue-500 hover:text-white hover:bg-blue-500 hover:border-blue-500 focus:outline-none  dark:border-gray-700 dark:hover:border-blue-500",
-    ],
-    [
-      "ghost",
-      "border border-transparent text-blue-500 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500",
-    ],
-    [
-      "soft",
-      "bg-blue-100 border border-transparent text-blue-500 hover:text-white hover:bg-blue-500 focus:outline-none ring-offset-white focus:ring-blue-500",
-    ],
+    ["solid", " text-white"],
+    ["outline", "!py-[.688rem] border-2"],
     [
       "white",
-      "border !font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-offset-white focus:ring-blue-600 dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800",
-    ],
-    [
-      "link",
-      "border border-transparent text-blue-500 hover:text-blue-700 focus:outline-none ring-offset-white focus:ring-blue-500",
+      "!font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50  focus:ring-offset-white focus:ring-blue-600 dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800",
     ],
   ]);
+
+  const buttonVariant = new Map([
+    
+  ])
 
   const buttonSize = new Map([
     ["smaller", "py-1 px-2 text-xs"],

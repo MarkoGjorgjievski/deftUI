@@ -8,8 +8,7 @@
   export let dataHsRemoveElement: string = "";
 
   export let size: "small" | "medium" | "large" = "medium";
-  export let type: "outline" | "ghost" | "" = "";
-  export let state: "solid" | "soft" = "solid";
+  export let state: "solid" | "soft" | "outline" | "ghost" = "solid";
 
   // Use **shrink** when button contains only icon
   export let width: "shrink" | "full" | "" = "";
@@ -19,22 +18,16 @@
     | "success"
     | "warning"
     | "danger"
+    | "inverted"
+    | "off-base"
     | "neutral" = "neutral";
-
-  // const buttonVariant = new Map([
-  //   ["primary", ""],
-  //   ["info", ""],
-  //   ["primary", ""],
-  //   ["primary", ""],
-  //   ["primary", ""],
-  //   ["primary", ""],
-  // ]);
 </script>
 
 <button
   on:click
-  class={twMerge("btn", loading && "loading", $$props.class)}
+  class={twMerge("btn", size, state, width, variant, loading && "loading")}
   {disabled}
+  data-hs-remove-element={dataHsRemoveElement}
 >
   {#if loading}
     <span class="sr-only">Loading...</span>

@@ -37,6 +37,7 @@
     "postcss": "^8.4.31",
     "postcss-at-rules-variables": "^0.3.0",
     "postcss-each": "^1.1.0",
+    "postcss-mixins": "^9.0.4",
     "prettier": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

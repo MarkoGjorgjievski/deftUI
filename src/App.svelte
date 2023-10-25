@@ -21,41 +21,42 @@
 <div class="p-3 m-3 bg-base-300 text-base-content">
   <div>base-300</div>
 </div>
-<div class="flex gap-2 p-3">
-  <Button class="primary solid" label="Button" />
-  <Button class="info solid" label="Button" />
-  <Button class="success solid" label="Button" />
-  <Button class="warning solid" label="Button" />
-  <Button class="danger solid" label="Button" />
-  <Button class="inverted solid" label="Button" />
-  <Button class="off-base solid" label="Button" />
-  <Button class="neutral" label="Button" />
+<div class="flex gap-2 p-3 h-40">
+  <Button variant="primary" label="Button" size="small" disabled />
+  <Button variant="primary" label="Button" size="small" />
+  <Button variant="info" label="Button" />
+  <Button variant="success" label="Button" />
+  <Button variant="warning" label="Button" />
+  <Button variant="danger" label="Button" />
+  <Button variant="inverted" label="Button" />
+  <Button variant="off-base" label="Button" />
+  <Button variant="neutral" label="Button" size="large" />
 </div>
 
 <div class="flex gap-2 p-3">
-  <Button class="primary soft" label="Button" />
-  <Button class="info soft" label="Button" />
-  <Button class="success soft" label="Button" />
-  <Button class="warning soft" label="Button" />
-  <Button class="danger soft" label="Button" />
+  <Button variant="primary" state="soft" label="Button" />
+  <Button variant="info" state="soft" label="Button" />
+  <Button variant="success" state="soft" label="Button" />
+  <Button variant="warning" state="soft" label="Button" />
+  <Button variant="danger" state="soft" label="Button" />
 </div>
 
 <div class="flex gap-2 p-3">
-  <Button class="primary outline" label="Button" />
-  <Button class="info outline" label="Button" />
-  <Button class="success outline" label="Button" />
-  <Button class="warning outline" label="Button" />
-  <Button class="danger outline" label="Button" />
-  <Button class="inverted outline" label="Button" />
-  <Button class="off-base outline" label="Button" />
+  <Button variant="primary" state="outline" label="Button" />
+  <Button variant="info" state="outline" label="Button" />
+  <Button variant="success" state="outline" label="Button" />
+  <Button variant="warning" state="outline" label="Button" />
+  <Button variant="danger" state="outline" label="Button" />
+  <Button variant="inverted" state="outline" label="Button" />
+  <Button variant="off-base" state="outline" label="Button" />
 </div>
 
 <div class="flex gap-2 p-3">
-  <Button class="primary ghost" label="Button" />
-  <Button class="info ghost" label="Button" />
-  <Button class="success ghost" label="Button" />
-  <Button class="warning ghost" label="Button" />
-  <Button class="danger ghost" label="Button" />
-  <Button class="inverted ghost" label="Button" />
-  <Button class="off-base ghost" label="Button" />
+  <Button variant="primary" state="ghost" label="Button" />
+  <Button variant="info" state="ghost" label="Button" />
+  <Button variant="success" state="ghost" label="Button" />
+  <Button variant="warning" state="ghost" label="Button" />
+  <Button variant="danger" state="ghost" label="Button" />
+  <Button variant="inverted" state="ghost" label="Button" />
+  <Button variant="off-base" state="ghost" label="Button" />
 </div>

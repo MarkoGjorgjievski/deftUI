@@ -2,7 +2,6 @@ import type { Meta, StoryObj } from "@storybook/svelte";
 
 import Button from "./Button.svelte";
 
-// More on how to set up stories at: https://storybook.js.org/docs/svelte/writing-stories/introduction
 const meta = {
   title: "Example/Button",
   component: Button,
@@ -10,21 +9,28 @@ const meta = {
   argTypes: {
     size: {
       control: { type: "select" },
-      options: ["smaller", "small", "medium", "large"],
+      options: ["small", "medium", "large"],
     },
     state: {
       control: { type: "select" },
-      options: ["solid", "outline", "ghost", "soft", "white", "link"],
+      options: ["solid", "soft", "outline", "ghost"],
     },
-    width: {
+
+    // Use **shrink** when button contains only icon
+    width: { control: { type: "select" }, options: ["shrink", "full"] },
+
+    variant: {
       control: { type: "select" },
-      options: ["shrink", "full", "default"],
-    },
-    disabled: {
-      control: { type: "boolean" },
-    },
-    loading: {
-      control: { type: "boolean" },
+      options: [
+        "primary",
+        "info",
+        "success",
+        "warning",
+        "danger",
+        "inverted",
+        "off-base",
+        "neutral",
+      ],
     },
   },
 } satisfies Meta<Button>;
@@ -32,103 +38,59 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const label = "Button";
+const args = {
+  label: "Button",
+  disabled: false,
+  loading: false,
+};
 
-export const Large: Story = {
+export const Neutral: Story = {
   args: {
-    size: "large",
-    label,
+    variant: "neutral",
+    ...args,
   },
 };
 
-export const Medium: Story = {
+export const Primary: Story = {
   args: {
-    size: "medium",
-    label,
+    variant: "primary",
+    ...args,
   },
 };
 
-export const Small: Story = {
+export const Info: Story = {
   args: {
-    size: "small",
-    label,
+    variant: "info",
+    ...args,
   },
 };
-
-export const Smaller: Story = {
+export const Success: Story = {
   args: {
-    size: "smaller",
-    label,
+    variant: "success",
+    ...args,
   },
 };
-
-export const Solid: Story = {
+export const Warning: Story = {
   args: {
-    state: "solid",
-    label,
+    variant: "warning",
+    ...args,
   },
 };
-
-export const Outline: Story = {
+export const Danger: Story = {
   args: {
-    state: "outline",
-    label,
+    variant: "danger",
+    ...args,
   },
 };
-
-export const Ghost: Story = {
+export const Inverted: Story = {
   args: {
-    state: "ghost",
-    label,
+    variant: "inverted",
+    ...args,
   },
 };
-
-export const Soft: Story = {
+export const OffBase: Story = {
   args: {
-    state: "soft",
-    label,
-  },
-};
-
-export const White: Story = {
-  args: {
-    state: "white",
-    label,
-  },
-};
-
-export const Link: Story = {
-  args: {
-    state: "link",
-    label,
-  },
-};
-
-export const Shrink: Story = {
-  args: {
-    label: "👍",
-    size: "small",
-    width: "shrink",
-  },
-};
-
-export const Full: Story = {
-  args: {
-    label,
-    width: "full",
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    label,
-    disabled: false,
-  },
-};
-
-export const Loading: Story = {
-  args: {
-    label,
-    loading: true,
+    variant: "off-base",
+    ...args,
   },
 };

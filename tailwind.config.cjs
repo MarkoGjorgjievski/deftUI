@@ -36,6 +36,9 @@ export default {
         "base-200": "rgb(var(--base-200) / <alpha-value>)",
         "base-300": "rgb(var(--base-300) / <alpha-value>)",
         "base-content": "rgb(var(--base-content) / <alpha-value>)",
+        inverted: "rgb(var(--inverted) / <alpha-value>)",
+        "neutral-content": "rgb(var(--neutral-content) / <alpha-value>)",
+        "neutral-focus": "rgb(var(--neutral-focus) / <alpha-value>)",
       },
       borderColor: {
         border: "rgb(var(--base-200) / <alpha-value>)",

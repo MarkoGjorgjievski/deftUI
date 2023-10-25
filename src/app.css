@@ -31,11 +31,31 @@
     --color-danger-content: theme("colors.white");
     --color-danger-focus: theme("colors.red.600");
 
+    --light-shade: 250 250 250;
+    --light-shade-100: 249 250 251; /* gray  50 */
+    --light-shade-200: 229 231 235; /* gray  200 */
+    --light-shade-300: 209 213 219; /* gray  300 */
+    --light-shade-content: 75 85 99;
+
+    --dark-shade: 15 23 42; /* slate-900*/
+    --dark-shade-100: 30 41 59; /* slate-800 */
+    --dark-shade-200: 51 65 85; /* slate-700 */
+    --dark-shade-300: 71 85 105; /* slate-600 */
+    --dark-shade-content: 255 255 255;
+
+    --dark-shade-100: 30 41 59; /* slate-800 */
+    --dark-shade-200: 51 65 85; /* slate-700 */
+    --dark-shade-300: 71 85 105; /* slate-600 */
+    --dark-shade-content: 255 255 255;
+
+    --base: 255 255 255;
     --base-100: 249 250 251; /* gray  50 */
     --base-200: 229 231 235; /* gray  200 */
     --base-300: 209 213 219; /* gray  300 */
     --base-content: 75 85 99;
-
+    --inverted: var(--dark-shade);
+    --neutral-content: 55 65 81; /* gray-700*/
+    --neutral-focus: 31 41 55; /* gray-800*/
     /* --check1: rgb(249, 250, 251);  gray  50 */
     /* --check2: rgb(243, 244, 246);  gray 100 */
     /* --check2: rgb(229, 231, 235);  gray 200 */
@@ -48,15 +68,11 @@
     --base-200: 51 65 85; /* slate-700 */
     --base-300: 71 85 105; /* slate-600 */
     --base-content: 255 255 255;
+    --inverted: var(--light-shade);
+    --neutral-content: 156 163 175; /* gray-400*/
   }
 
   html {
     @apply bg-base;
-  }
-}
-
-@layer components {
-  .btn {
-    @apply inline-flex justify-center items-center gap-2 rounded-md font-semibold transition-all duration-300 border border-transparent text-sm focus:ring-2 focus:ring-offset-2 focus:outline-none py-3 px-4;
   }
 }

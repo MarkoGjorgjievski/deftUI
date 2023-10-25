@@ -6,7 +6,7 @@
 
 <ThemeSwitcher />
 
-<div class="p-3 m-3 text-base-content border">
+<div class="p-3 m-3 text-base-content border border-base-300">
   <div>base</div>
 </div>
 
@@ -22,23 +22,40 @@
   <div>base-300</div>
 </div>
 <div class="flex gap-2 p-3">
-  <button class="btn bg-primary text-primary-content focus:ring-offset-primary"
-    >Button</button
-  >
-  <button class="btn bg-info text-primary-content">Button</button>
-  <button class="btn bg-success text-primary-content">Button</button>
-  <button class="btn bg-warning text-primary-content">Button</button>
-  <button class="btn bg-danger text-primary-content">Button</button>
-  <button class="btn bg-base border border-base-200 text-base-content shadow-sm"
-    >Button</button
-  >
+  <Button class="primary solid" label="Button" />
+  <Button class="info solid" label="Button" />
+  <Button class="success solid" label="Button" />
+  <Button class="warning solid" label="Button" />
+  <Button class="danger solid" label="Button" />
+  <Button class="inverted solid" label="Button" />
+  <Button class="off-base solid" label="Button" />
+  <Button class="neutral" label="Button" />
 </div>
 
 <div class="flex gap-2 p-3">
-  <button class="btn bg-primary-soft text-primary">Button</button>
-  <button class="btn bg-info-soft text-info">Button</button>
-  <button class="btn bg-success-soft text-success">Button</button>
-  <button class="btn bg-warning-soft text-warning">Button</button>
-  <button class="btn bg-danger-soft text-danger">Button</button>
-  <button class="btn bg-base-100 text-base-content">Button</button>
+  <Button class="primary soft" label="Button" />
+  <Button class="info soft" label="Button" />
+  <Button class="success soft" label="Button" />
+  <Button class="warning soft" label="Button" />
+  <Button class="danger soft" label="Button" />
+</div>
+
+<div class="flex gap-2 p-3">
+  <Button class="primary outline" label="Button" />
+  <Button class="info outline" label="Button" />
+  <Button class="success outline" label="Button" />
+  <Button class="warning outline" label="Button" />
+  <Button class="danger outline" label="Button" />
+  <Button class="inverted outline" label="Button" />
+  <Button class="off-base outline" label="Button" />
+</div>
+
+<div class="flex gap-2 p-3">
+  <Button class="primary ghost" label="Button" />
+  <Button class="info ghost" label="Button" />
+  <Button class="success ghost" label="Button" />
+  <Button class="warning ghost" label="Button" />
+  <Button class="danger ghost" label="Button" />
+  <Button class="inverted ghost" label="Button" />
+  <Button class="off-base ghost" label="Button" />
 </div>

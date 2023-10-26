@@ -71,3 +71,110 @@
     @apply bg-base;
   }
 }
+
+@layer utilities {
+  :root {
+    .primary {
+      &.solid {
+        @apply bg-primary text-primary-content;
+      }
+      &.soft {
+        @apply bg-primary-soft text-primary;
+      }
+      &.outline {
+        @apply text-primary border-2 border-primary-soft hover:border-primary;
+      }
+      &.ghost {
+        @apply text-primary;
+      }
+    }
+
+    .info {
+      &.solid {
+        @apply bg-info text-info-content;
+      }
+      &.soft {
+        @apply bg-info-soft text-info;
+      }
+      &.outline {
+        @apply text-info border-2 border-info-soft;
+      }
+      &.ghost {
+        @apply text-info;
+      }
+    }
+
+    .success {
+      &.solid {
+        @apply bg-success text-success-content;
+      }
+      &.soft {
+        @apply bg-success-soft text-success;
+      }
+      &.outline {
+        @apply text-success  border-2  hover:border-success;
+      }
+      &.ghost {
+        @apply text-success;
+      }
+    }
+
+    .warning {
+      &.solid {
+        @apply bg-warning text-warning-content;
+      }
+      &.soft {
+        @apply bg-warning-soft text-warning;
+      }
+      &.outline {
+        @apply text-warning border-2 border-warning-soft;
+      }
+      &.ghost {
+        @apply text-warning;
+      }
+    }
+
+    .danger {
+      &.solid {
+        @apply bg-danger text-danger-content;
+      }
+      &.soft {
+        @apply bg-danger-soft text-danger;
+      }
+      &.outline {
+        @apply text-danger border-2 border-danger-soft;
+      }
+      &.ghost {
+        @apply text-danger;
+      }
+    }
+
+    .inverted {
+      &.solid {
+        @apply bg-inverted text-base-100;
+      }
+      &.outline {
+        @apply text-inverted border-2 border-base-300;
+      }
+      &.ghost {
+        @apply text-inverted;
+      }
+    }
+
+    .off-base {
+      &.solid {
+        @apply bg-base-300 text-base-content;
+      }
+      &.outline {
+        @apply text-base-content/90 border-2 border-base-200;
+      }
+      &.ghost {
+        @apply text-base-content/90;
+      }
+    }
+
+    .neutral {
+      @apply hover:text-neutral-content shadow-sm text-neutral-content border-base-200;
+    }
+  }
+}

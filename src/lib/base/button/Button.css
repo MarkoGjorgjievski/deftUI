@@ -49,104 +49,104 @@
   }
 
   &.neutral {
-    @apply hover:bg-base-100 hover:text-neutral-content shadow-sm text-neutral-content border-base-200 focus:ring-offset-base focus:ring-primary-focus;
+    @apply hover:bg-base-100 hover:text-neutral-content focus:ring-offset-base focus:ring-primary-focus;
   }
 
   &.primary {
     &.solid {
-      @apply bg-primary text-primary-content focus:ring-primary focus:ring-offset-base hover:bg-primary-focus;
+      @apply focus:ring-primary focus:ring-offset-base hover:bg-primary-focus;
     }
     &.soft {
-      @apply bg-primary-soft text-primary hover:bg-primary hover:text-primary-content focus:ring-primary-soft;
+      @apply hover:bg-primary hover:text-primary-content focus:ring-primary-soft;
     }
     &.outline {
-      @apply text-primary outline-none border-2 border-primary-soft hover:bg-primary hover:text-primary-content focus:ring-primary-soft hover:border-primary;
+      @apply hover:bg-primary hover:text-primary-content focus:ring-primary-soft hover:border-primary outline-none;
     }
     &.ghost {
-      @apply text-primary outline-none hover:bg-primary-soft hover:text-primary focus:ring-primary;
+      @apply hover:bg-primary-soft hover:text-primary focus:ring-primary outline-none;
     }
   }
 
   &.info {
     &.solid {
-      @apply bg-info text-info-content focus:ring-info focus:ring-offset-base hover:bg-info-focus;
+      @apply focus:ring-info focus:ring-offset-base hover:bg-info-focus;
     }
     &.soft {
-      @apply bg-info-soft text-info hover:bg-info hover:text-info-content focus:ring-info-soft;
+      @apply hover:bg-info hover:text-info-content focus:ring-info-soft;
     }
     &.outline {
-      @apply text-info outline-none border-2 border-info-soft hover:bg-info hover:text-info-content focus:ring-info-soft hover:border-info;
+      @apply hover:bg-info hover:text-info-content focus:ring-info-soft hover:border-info outline-none;
     }
     &.ghost {
-      @apply text-info outline-none hover:bg-info-soft hover:text-info focus:ring-info;
+      @apply hover:bg-info-soft hover:text-info focus:ring-info outline-none;
     }
   }
 
   &.success {
     &.solid {
-      @apply bg-success text-success-content focus:ring-success focus:ring-offset-base hover:bg-success-focus;
+      @apply focus:ring-success focus:ring-offset-base hover:bg-success-focus;
     }
     &.soft {
-      @apply bg-success-soft text-success hover:bg-success hover:text-success-content focus:ring-success-soft;
+      @apply hover:bg-success hover:text-success-content focus:ring-success-soft;
     }
     &.outline {
-      @apply text-success outline-none border-2 border-success-soft hover:bg-success hover:text-success-content focus:ring-success-soft hover:border-success;
+      @apply hover:bg-success hover:text-success-content focus:ring-success-soft hover:border-success outline-none;
     }
     &.ghost {
-      @apply text-success outline-none hover:bg-success-soft hover:text-success focus:ring-success;
+      @apply hover:bg-success-soft hover:text-success focus:ring-success outline-none;
     }
   }
 
   &.warning {
     &.solid {
-      @apply bg-warning text-warning-content focus:ring-warning focus:ring-offset-base hover:bg-warning-focus;
+      @apply focus:ring-warning focus:ring-offset-base hover:bg-warning-focus;
     }
     &.soft {
-      @apply bg-warning-soft text-warning hover:bg-warning hover:text-warning-content focus:ring-warning-soft;
+      @apply hover:bg-warning hover:text-warning-content focus:ring-warning-soft;
     }
     &.outline {
-      @apply text-warning outline-none border-2 border-warning-soft hover:bg-warning hover:text-warning-content focus:ring-warning-soft hover:border-warning;
+      @apply hover:bg-warning hover:text-warning-content focus:ring-warning-soft hover:border-warning outline-none;
     }
     &.ghost {
-      @apply text-warning outline-none hover:bg-warning-soft hover:text-warning focus:ring-warning;
+      @apply hover:bg-warning-soft hover:text-warning focus:ring-warning outline-none;
     }
   }
 
   &.danger {
     &.solid {
-      @apply bg-danger text-danger-content focus:ring-danger focus:ring-offset-base hover:bg-danger-focus;
+      @apply focus:ring-danger focus:ring-offset-base hover:bg-danger-focus;
     }
     &.soft {
-      @apply bg-danger-soft text-danger hover:bg-danger hover:text-danger-content focus:ring-danger-soft;
+      @apply hover:bg-danger hover:text-danger-content focus:ring-danger-soft;
     }
     &.outline {
-      @apply text-danger outline-none border-2 border-danger-soft hover:bg-danger hover:text-danger-content focus:ring-danger-soft hover:border-danger;
+      @apply hover:bg-danger hover:text-danger-content focus:ring-danger-soft hover:border-danger outline-none;
     }
     &.ghost {
-      @apply text-danger outline-none hover:bg-danger-soft hover:text-danger focus:ring-danger;
+      @apply hover:bg-danger-soft hover:text-danger focus:ring-danger outline-none;
     }
   }
 
   &.inverted {
     &.solid {
-      @apply bg-inverted text-base-100 focus:ring-inverted focus:ring-offset-base hover:bg-inverted/95;
+      @apply focus:ring-inverted focus:ring-offset-base hover:bg-inverted/95;
     }
     &.outline {
-      @apply text-inverted outline-none border-2 border-base-300 hover:bg-inverted hover:text-base-100 focus:ring-base-300 hover:border-inverted;
+      @apply hover:bg-inverted hover:text-base-100 focus:ring-base-300 hover:border-inverted outline-none;
     }
     &.ghost {
-      @apply text-inverted outline-none hover:bg-inverted hover:text-base-100 focus:ring-inverted;
+      @apply hover:bg-inverted hover:text-base-100 focus:ring-inverted outline-none;
     }
   }
   &.off-base {
     &.solid {
-      @apply bg-base-300 text-base-content focus:ring-base-300 focus:ring-offset-base hover:bg-base-200;
+      @apply focus:ring-base-300 focus:ring-offset-base hover:bg-base-200;
     }
     &.outline {
-      @apply text-base-content/90 outline-none border-2 border-base-200 hover:bg-base-300 hover:text-base-content focus:ring-base-300 hover:border-base-300;
+      @apply hover:bg-base-300 hover:text-base-content focus:ring-base-300 hover:border-base-300 outline-none;
     }
     &.ghost {
-      @apply text-base-content/90 outline-none hover:bg-base-300 hover:text-base-content focus:ring-base-300;
+      @apply hover:bg-base-300 hover:text-base-content focus:ring-base-300 outline-none;
     }
   }
 

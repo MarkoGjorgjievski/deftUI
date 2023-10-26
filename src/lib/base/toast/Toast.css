@@ -1,0 +1,20 @@
+.toast {
+  &.soft {
+    @apply shadow-sm;
+  }
+  &.info {
+    @apply border-info/30;
+  }
+
+  &.success {
+    @apply border-success/30;
+  }
+
+  &.warning {
+    @apply border-warning/30;
+  }
+
+  &.danger {
+    @apply border-danger/30;
+  }
+}

@@ -3,6 +3,7 @@
   import Badge from "./lib/base/badge/Badge.svelte";
   import ButtonGroup from "./lib/base/button-group/ButtonGroup.svelte";
   import Button from "./lib/base/button/Button.svelte";
+  import Toast from "./lib/base/toast/Toast.svelte";
   import ThemeSwitcher from "./theme-switcher/ThemeSwitcher.svelte";
 </script>
 
@@ -78,4 +79,17 @@
 <div class="p-4">
   <Badge variant="primary" state="soft" label="Badge" />
   <Badge variant="success" label="Badge" />
+</div>
+
+<div class="p-4 flex flex-col gap-2">
+  <Toast variant="info" state="solid" />
+  <Toast variant="info" state="soft" />
+  <Toast variant="success" state="solid" />
+  <Toast variant="success" state="soft" />
+  <Toast variant="warning" state="solid" />
+  <Toast variant="warning" state="soft" />
+  <Toast variant="danger" state="solid" />
+  <Toast variant="danger" state="soft" />
+
+  <Toast variant="neutral" />
 </div>

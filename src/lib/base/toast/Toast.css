@@ -2,6 +2,9 @@
   &.soft {
     @apply shadow-sm;
   }
+  &.neutral {
+    @apply shadow-lg;
+  }
   &.info {
     @apply border-info/30;
   }

@@ -2,9 +2,15 @@
   import "./Toast.css";
   import { twMerge } from "tailwind-merge";
   import type { State, Variant } from "../types";
+  import Button from "../button/Button.svelte";
 
   export let variant: Variant = "neutral";
   export let state: State = "solid";
+
+  export let action: boolean = false;
+  export let title: string = ""; // App notifications
+  export let message: string =
+    "Notifications may include alerts, sounds and icon badges.";
 </script>
 
 <div
@@ -19,7 +25,10 @@
   <div class="flex p-4">
     <div class="flex-shrink-0">
       <svg
-        class="h-4 w-4 text-current mt-0.5"
+        class={twMerge(
+          variant === "neutral" ? "text-primary" : "text-current",
+          "h-4 w-4 mt-0.5"
+        )}
         xmlns="http://www.w3.org/2000/svg"
         width="16"
         height="16"
@@ -31,8 +40,24 @@
         />
       </svg>
     </div>
-    <div class="ml-3">
-      <p class={twMerge("text-sm")}>This is a normal message.</p>
+    <div
+      class={twMerge(
+        title ? "ml-4" : "ml-3",
+        state === "soft" ? "text-inverted dark:text-base" : "text-current"
+      )}
+    >
+      {#if title}<h3 class="font-semibold">{title}</h3>{/if}
+      <!-- if no title, message text - current -->
+      <div class={twMerge(title && "mt-1", "text-sm")}>
+        {message}
+      </div>
+      {#if action}<div class="mt-4">
+          <div class="flex space-x-3 text-sm font-semibold">
+            <button class="underline">Don't allow</button>
+            <Button size="small" label="Allow" />
+          </div>
+        </div>
+      {/if}
     </div>
   </div>
 </div>

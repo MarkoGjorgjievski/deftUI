@@ -37,6 +37,7 @@ export default {
         "base-300": "rgb(var(--base-300) / <alpha-value>)",
         "base-content": "rgb(var(--base-content) / <alpha-value>)",
         inverted: "rgb(var(--inverted) / <alpha-value>)",
+        "inverted-100": "rgb(var(--inverted-100) / <alpha-value>)",
         "neutral-content": "rgb(var(--neutral-content) / <alpha-value>)",
         "neutral-focus": "rgb(var(--neutral-focus) / <alpha-value>)",
       },

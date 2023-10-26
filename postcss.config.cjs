@@ -12,8 +12,9 @@ module.exports = {
         ]).process(root, result.opts);
       },
     },
-    require("tailwindcss"),
     require("postcss-nested"),
+    require("tailwindcss/nesting"),
+    require("tailwindcss"),
     require("autoprefixer"),
   ],
 };

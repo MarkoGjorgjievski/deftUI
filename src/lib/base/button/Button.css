@@ -21,8 +21,19 @@
 
   &.small {
     @apply py-2 px-3;
+
     &.shrink {
       @apply h-[2.375rem] w-[2.375rem] p-0;
+    }
+
+    &.grouped {
+      @apply py-3 px-4;
+    }
+  }
+
+  &.medium {
+    &.grouped {
+      @apply sm:p-4;
     }
   }
 
@@ -30,6 +41,10 @@
     @apply py-3 px-4 sm:p-5;
     &.shrink {
       @apply h-[3.875rem] w-[3.875rem] p-0;
+    }
+
+    &.grouped {
+      @apply sm:p-[1.3125rem];
     }
   }
 
@@ -133,5 +148,9 @@
     &.ghost {
       @apply text-base-content/90 outline-none hover:bg-base-300 hover:text-base-content focus:ring-base-300;
     }
+  }
+
+  &.grouped {
+    @apply -ml-px hover:!bg-base-100 rounded-none first:rounded-l-lg first:ml-0 last:rounded-r-lg bg-base text-neutral-content align-middle focus:z-10 focus:ring-primary border-base-200 dark:bg-gray-800 font-medium;
   }
 }

@@ -1,26 +1,24 @@
 <script lang="ts">
+  import Loader from "../loader/Loader.svelte";
   import "./Button.css";
   import { twMerge } from "tailwind-merge";
+
+  import type {
+    ButtonSize,
+    ButtonState,
+    ButtonVariant,
+    ButtonWidth,
+  } from "./ButtonTypes";
 
   export let label: string = "";
   export let loading: boolean = false;
   export let disabled: boolean = false;
   export let dataHsRemoveElement: string = "";
-
-  export let size: "small" | "medium" | "large" = "medium";
-  export let state: "solid" | "soft" | "outline" | "ghost" = "solid";
-
+  export let size: ButtonSize = "medium";
+  export let state: ButtonState = "solid";
+  export let variant: ButtonVariant = "neutral";
   // Use **shrink** when button contains only icon
-  export let width: "shrink" | "full" | "" = "";
-  export let variant:
-    | "primary"
-    | "info"
-    | "success"
-    | "warning"
-    | "danger"
-    | "inverted"
-    | "off-base"
-    | "neutral" = "neutral";
+  export let width: ButtonWidth = "";
 </script>
 
 <button
@@ -30,10 +28,7 @@
   data-hs-remove-element={dataHsRemoveElement}
 >
   {#if loading}
-    <span class="sr-only">Loading...</span>
-    <span role="status" aria-label="loading">
-      <span class="sr-only">Loading...</span>
-    </span>
+    <Loader />
   {/if}
   <slot name="iconStart" />
   {label}

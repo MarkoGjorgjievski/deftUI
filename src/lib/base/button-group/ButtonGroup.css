@@ -1,0 +1,19 @@
+.button-group {
+  @apply inline-flex rounded-md shadow-sm;
+
+  &.vertical {
+    @apply max-w-xs flex flex-col;
+
+    .btn {
+      @apply rounded-none first:rounded-t-md last:rounded-b-md;
+    }
+  }
+
+  &.break {
+    @apply flex flex-col md:inline-flex md:flex-row;
+
+    .btn {
+      @apply rounded-none first:rounded-t-md last:rounded-b-md md:last:rounded-r-md md:last:rounded-l-none md:first:rounded-l-md md:first:rounded-r-none;
+    }
+  }
+}

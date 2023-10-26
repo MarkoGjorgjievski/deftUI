@@ -1,5 +1,6 @@
 <script>
   import Alert from "./lib/base/alert/Alert.svelte";
+  import Badge from "./lib/base/badge/Badge.svelte";
   import ButtonGroup from "./lib/base/button-group/ButtonGroup.svelte";
   import Button from "./lib/base/button/Button.svelte";
   import ThemeSwitcher from "./theme-switcher/ThemeSwitcher.svelte";
@@ -72,4 +73,9 @@
   <Button variant="danger" state="ghost" label="Button" />
   <Button variant="inverted" state="ghost" label="Button" />
   <Button variant="off-base" state="ghost" label="Button" />
+</div>
+
+<div class="p-4">
+  <Badge variant="primary" state="soft" label="Badge" />
+  <Badge variant="success" label="Badge" />
 </div>

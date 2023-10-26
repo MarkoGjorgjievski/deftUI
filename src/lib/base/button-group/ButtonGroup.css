@@ -2,7 +2,7 @@
   @apply inline-flex rounded-md shadow-sm;
 
   &.vertical {
-    @apply max-w-xs flex flex-col;
+    @apply max-w-xs flex flex-col rounded-none;
 
     .btn {
       @apply rounded-none first:rounded-t-md last:rounded-b-md;

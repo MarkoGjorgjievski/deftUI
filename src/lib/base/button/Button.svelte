@@ -3,22 +3,17 @@
   import "./Button.css";
   import { twMerge } from "tailwind-merge";
 
-  import type {
-    ButtonSize,
-    ButtonState,
-    ButtonVariant,
-    ButtonWidth,
-  } from "./ButtonTypes";
+  import type { Size, State, Variant, Width } from "../types";
 
   export let label: string = "";
   export let loading: boolean = false;
   export let disabled: boolean = false;
   export let dataHsRemoveElement: string = "";
-  export let size: ButtonSize = "medium";
-  export let state: ButtonState = "solid";
-  export let variant: ButtonVariant = "neutral";
-  // Use **shrink** when button contains only icon
-  export let width: ButtonWidth = "";
+  export let size: Size = "medium";
+  export let state: State | "outline" | "ghost" = "solid";
+  export let variant: Variant = "neutral";
+  // Use **shrink** when  contains only icon
+  export let width: Width = "";
 </script>
 
 <button

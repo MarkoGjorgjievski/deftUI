@@ -112,7 +112,7 @@
         @apply bg-success-soft text-success;
       }
       &.outline {
-        @apply text-success  border-2  hover:border-success;
+        @apply text-success border-2 border-success-soft;
       }
       &.ghost {
         @apply text-success;
@@ -174,7 +174,7 @@
     }
 
     .neutral {
-      @apply hover:text-neutral-content shadow-sm text-neutral-content border-base-200;
+      @apply hover:text-neutral-content border shadow-sm text-neutral-content border-base-200;
     }
   }
 }

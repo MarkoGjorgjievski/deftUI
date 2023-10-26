@@ -3,14 +3,42 @@
   import { twMerge } from "tailwind-merge";
   import type { State, Variant } from "../types";
   import Button from "../button/Button.svelte";
+  import type { SvelteComponent } from "svelte";
+
+  type actionButton = {
+    onClick: () => void;
+    label: string;
+  };
+
+  type actionButtonsType = {
+    confirm: actionButton;
+    reject: actionButton;
+  };
 
   export let variant: Variant = "neutral";
   export let state: State = "solid";
 
-  export let action: boolean = false;
-  export let title: string = ""; // App notifications
+  export let actionButtons: actionButtonsType | null = null;
+  export let title: string = "App notifications"; // App notifications
   export let message: string =
     "Notifications may include alerts, sounds and icon badges.";
+  export let icon: typeof SvelteComponent | null = null;
+  export let dismissible: boolean = false;
+  export let id: string = "";
+
+  const alertIcons = new Map([
+    ["info", "bi bi-info-circle-fill"],
+    ["success", "bi bi-check-circle-fill"],
+    ["warning", "bi bi-exclamation-triangle-fill"],
+    ["danger", "bi bi-exclamation-octagon-fill"],
+    ["neutral", "bi bi-info-circle-fill"],
+  ]);
+
+  let alert: HTMLElement;
+
+  $: if (!id) {
+    alert?.removeAttribute("id");
+  }
 </script>
 
 <div
@@ -18,46 +46,63 @@
     "toast",
     variant,
     state,
-    "max-w-xs border rounded-md shadow-lg"
+    "max-w-xs border rounded-md shadow-lg",
+    dismissible &&
+      "hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300"
   )}
   role="alert"
+  {id}
+  bind:this={alert}
 >
   <div class="flex p-4">
     <div class="flex-shrink-0">
-      <svg
+      <span
         class={twMerge(
           variant === "neutral" ? "text-primary" : "text-current",
           "h-4 w-4 mt-0.5"
         )}
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="currentColor"
-        viewBox="0 0 16 16"
       >
-        <path
-          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
-        />
-      </svg>
+        {#if icon}
+          <svelte:component this={icon} />
+        {:else}
+          <i class={alertIcons.get(variant)} />
+        {/if}
+      </span>
     </div>
-    <div
-      class={twMerge(
-        title ? "ml-4" : "ml-3",
-        state === "soft" ? "text-inverted dark:text-base" : "text-current"
-      )}
-    >
-      {#if title}<h3 class="font-semibold">{title}</h3>{/if}
-      <!-- if no title, message text - current -->
+    <div class={twMerge(title ? "ml-4" : "ml-3")}>
+      {#if title}<h3 class={twMerge("font-semibold")}>{title}</h3>{/if}
       <div class={twMerge(title && "mt-1", "text-sm")}>
         {message}
       </div>
-      {#if action}<div class="mt-4">
+      {#if actionButtons !== null && !dismissible}<div class="mt-4">
           <div class="flex space-x-3 text-sm font-semibold">
-            <button class="underline">Don't allow</button>
-            <Button size="small" label="Allow" />
+            <button
+              class="underline"
+              on:click={() => actionButtons?.reject.onClick()}
+              >{actionButtons.reject.label}</button
+            >
+            <button
+              class="btn neutral small"
+              on:click={() => actionButtons?.confirm.onClick()}
+              >{actionButtons?.confirm.label}</button
+            >
           </div>
         </div>
       {/if}
     </div>
+    {#if dismissible}
+      <div class="ml-auto">
+        <button
+          type="button"
+          class={twMerge(
+            variant === "neutral" ? "text-primary" : "text-current"
+          )}
+          data-hs-remove-element="#{id}"
+        >
+          <span class="sr-only">Close</span>
+          <i class="bi bi-x-lg" />
+        </button>
+      </div>
+    {/if}
   </div>
 </div>

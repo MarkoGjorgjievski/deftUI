@@ -21,6 +21,7 @@
   class={twMerge("btn", size, state, width, variant, loading && "loading")}
   {disabled}
   data-hs-remove-element={dataHsRemoveElement}
+  type="button"
 >
   {#if loading}
     <Loader />

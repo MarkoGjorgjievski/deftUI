@@ -6,6 +6,16 @@
   import ThemeSwitcher from "./theme-switcher/ThemeSwitcher.svelte";
   import Accordion from "./lib/base/accordion/Accordion.svelte";
   import AccordionGroup from "./lib/base/accordion/AccordionGroup.svelte";
+  import Avatar from "./lib/base/Avatar/Avatar.svelte";
+  import Tabs from "./lib/navigation/tabs/Tabs.svelte";
+  import Tab from "./lib/navigation/tabs/Tab.svelte";
+  import TabPanel from "./lib/navigation/tabs/TabPanel.svelte";
+
+  const tabs = [
+    { slug: "first", label: "First" },
+    { slug: "second", label: "Second" },
+    { slug: "third", label: "Third" },
+  ];
 </script>
 
 <div class="flex gap-4">
@@ -14,9 +24,28 @@
       <ThemeSwitcher />
     </div>
 
+    <div class="p-4 gap-2 w-full">
+      <Tabs {tabs} />
+    </div>
+
     <div class="p-4 flex gap-2">
-      <div class="p-3 text-base-content border border-base-300">
-        <div>base</div>
+      <div class="p-3 flex gap-2">
+        <Avatar size="smallest" />
+        <Avatar size="small" active />
+        <Avatar />
+        <Avatar size="large" />
+      </div>
+      <div class="p-3 flex gap-2">
+        <Avatar size="smallest" rounded="medium" />
+        <Avatar size="small" rounded="medium" />
+        <Avatar rounded="medium" active />
+        <Avatar size="large" rounded="medium" />
+      </div>
+      <div class="flex -space-x-2">
+        <Avatar />
+        <Avatar />
+        <Avatar />
+        <Avatar />
       </div>
 
       <div class="p-3 bg-base-100 text-base-content border border-base-300">

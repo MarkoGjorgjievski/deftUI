@@ -8,8 +8,7 @@
   import AccordionGroup from "./lib/base/accordion/AccordionGroup.svelte";
   import Avatar from "./lib/base/Avatar/Avatar.svelte";
   import Tabs from "./lib/navigation/tabs/Tabs.svelte";
-  import Tab from "./lib/navigation/tabs/Tab.svelte";
-  import TabPanel from "./lib/navigation/tabs/TabPanel.svelte";
+  import Tooltip from "./lib/overlays/tooltip/Tooltip.svelte";
 
   const tabs = [
     { slug: "first", label: "First" },
@@ -76,6 +75,16 @@
       <Button variant="info" label="Button" />
       <Button variant="success" label="Button" />
       <Button variant="warning" label="Button" />
+      <Tooltip message="This is tooltip">This is the tooltip top</Tooltip>
+      <Tooltip message="This is tooltip" placement="bottom"
+        >This is the tooltip bottom</Tooltip
+      >
+      <Tooltip message="This is tooltip" placement="left"
+        >This is the tooltip left</Tooltip
+      >
+      <Tooltip message="This is tooltip" placement="right"
+        >This is the tooltip right</Tooltip
+      >
       <Button variant="danger" label="Button" />
       <Button variant="inverted" label="Button" />
       <Button variant="off-base" label="Button" />

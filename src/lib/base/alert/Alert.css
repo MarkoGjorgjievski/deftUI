@@ -1,4 +1,4 @@
-.toast {
+.alert {
   &.soft {
     @apply shadow-sm !bg-opacity-70 dark:!bg-opacity-100;
     &h3 {

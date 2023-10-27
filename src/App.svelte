@@ -2,8 +2,10 @@
   import Badge from "./lib/base/badge/Badge.svelte";
   import ButtonGroup from "./lib/base/button-group/ButtonGroup.svelte";
   import Button from "./lib/base/button/Button.svelte";
-  import Toast from "./lib/base/toast/Toast.svelte";
+  import Alert from "./lib/base/alert/Alert.svelte";
   import ThemeSwitcher from "./theme-switcher/ThemeSwitcher.svelte";
+  import Accordion from "./lib/base/accordion/Accordion.svelte";
+  import AccordionGroup from "./lib/base/accordion/AccordionGroup.svelte";
 </script>
 
 <div class="flex gap-4">
@@ -83,10 +85,18 @@
       <Badge variant="primary" state="soft" label="Badge" />
       <Badge variant="success" label="Badge" />
     </div>
+
+    <div class="p-4">
+      <AccordionGroup>
+        <Accordion id="1" title="Accordion 1" content="This is content 1" />
+        <Accordion id="2" title="Accordion 2" content="This is content 2" />
+      </AccordionGroup>
+    </div>
   </div>
+
   <div>
     <div class="p-4 flex flex-col gap-2">
-      <Toast
+      <Alert
         variant="info"
         state="solid"
         actionButtons={{
@@ -94,15 +104,15 @@
           reject: { onClick: () => console.log("reject"), label: "Reject" },
         }}
       />
-      <Toast variant="info" state="soft" id="info-soft" dismissible />
-      <Toast variant="success" state="solid" />
-      <Toast variant="success" state="soft" />
-      <Toast variant="warning" state="solid" />
-      <Toast variant="warning" state="soft" />
-      <Toast variant="danger" state="solid" />
-      <Toast variant="danger" state="soft" />
+      <Alert variant="info" state="soft" id="info-soft" dismissible />
+      <Alert variant="success" state="solid" />
+      <Alert variant="success" state="soft" />
+      <Alert variant="warning" state="solid" />
+      <Alert variant="warning" state="soft" />
+      <Alert variant="danger" state="solid" />
+      <Alert variant="danger" state="soft" />
 
-      <Toast variant="neutral" />
+      <Alert variant="neutral" />
     </div>
   </div>
 </div>

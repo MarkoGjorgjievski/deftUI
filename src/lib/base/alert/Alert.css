@@ -2,7 +2,7 @@
   &.soft {
     @apply shadow-sm !bg-opacity-70 dark:!bg-opacity-100;
     &h3 {
-      @apply text-primary !important;
+      @apply text-primary;
     }
   }
   &.neutral {

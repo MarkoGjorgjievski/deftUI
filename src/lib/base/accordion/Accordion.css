@@ -1,6 +1,0 @@
-.bordered {
-  @apply border -mt-px bg-base-100 border-base-200 first:rounded-t-lg last:rounded-b-lg;
-  button {
-    @apply py-4 px-5;
-  }
-}

@@ -1,6 +1,5 @@
 <script lang="ts">
   import { twMerge } from "tailwind-merge";
-  //   import "./Accordion.css";
 
   export let title: string = "";
   export let content: string = "";

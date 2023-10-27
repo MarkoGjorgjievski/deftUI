@@ -9,6 +9,7 @@
   import Avatar from "./lib/base/Avatar/Avatar.svelte";
   import Tabs from "./lib/navigation/tabs/Tabs.svelte";
   import Tooltip from "./lib/overlays/tooltip/Tooltip.svelte";
+  import Popover from "./lib/overlays/popover/Popover.svelte";
 
   const tabs = [
     { slug: "first", label: "First" },
@@ -60,7 +61,26 @@
       </div>
     </div>
 
-    <div class="p-4">
+    <h3>
+      I don't know if I can put a <Tooltip message="you can"
+        ><span class="underline">tooltip</span></Tooltip
+      > here in a sentance
+    </h3>
+
+    <Popover>
+      <span slot="element"><Avatar /> ----I am a popover click me!</span>
+      <span slot="content">
+        <div class="flex gap-2 p-2">
+          <Button variant="primary" state="soft" label="Button" loading />
+          <Button variant="info" state="soft" label="Button" />
+          <Button variant="success" state="soft" label="Button" />
+          <Button variant="warning" state="soft" label="Button" disabled />
+          <Button variant="danger" state="soft" label="Button" loading />
+        </div>
+      </span>
+    </Popover>
+
+    <div>
       <ButtonGroup>
         <Button label="Button" variant="grouped" size="small" />
         <Button label="Button" variant="grouped" size="small" />

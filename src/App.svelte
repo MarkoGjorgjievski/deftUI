@@ -10,6 +10,7 @@
   import Tabs from "./lib/navigation/tabs/Tabs.svelte";
   import Tooltip from "./lib/overlays/tooltip/Tooltip.svelte";
   import Popover from "./lib/overlays/popover/Popover.svelte";
+  import Dashboard from "./lib/templates/dashboard/Dashboard.svelte";
 
   const tabs = [
     { slug: "first", label: "First" },
@@ -18,7 +19,8 @@
   ];
 </script>
 
-<div class="flex gap-4">
+<Dashboard />
+<!-- <div class="flex gap-4">
   <div>
     <div class="p-3">
       <ThemeSwitcher />
@@ -173,4 +175,4 @@
       <Alert variant="neutral" />
     </div>
   </div>
-</div>
+</div> -->

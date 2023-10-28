@@ -175,6 +175,18 @@
       }
     }
 
+    .transparent {
+      &.solid {
+        @apply bg-transparent text-neutral-content;
+      }
+      &.outline {
+        @apply text-base-content/90 border-2 border-base-200;
+      }
+      &.ghost {
+        @apply text-base-content;
+      }
+    }
+
     .neutral {
       @apply bg-base hover:text-neutral-content border shadow-sm text-neutral-content border-base-200;
     }

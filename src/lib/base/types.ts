@@ -10,4 +10,5 @@ export type Variant =
   | "inverted"
   | "off-base"
   | "grouped"
+  | "base-color"
   | "neutral";

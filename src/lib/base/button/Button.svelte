@@ -8,20 +8,33 @@
   export let label: string = "";
   export let loading: boolean = false;
   export let disabled: boolean = false;
-  export let dataHsRemoveElement: string = "";
   export let size: Size = "medium";
   export let state: State | "outline" | "ghost" = "solid";
-  export let variant: Variant = "neutral";
+  export let variant: Variant | "transparent" = "neutral";
   // Use **shrink** when  contains only icon
   export let width: Width = "";
+  export let rounded: "full" | "medium" = "medium";
+
+  const roundedStyle = new Map([
+    ["full", "rounded-full"],
+    ["medium", "rounded-md"],
+  ]);
 </script>
 
 <button
   on:click
-  class={twMerge("btn", size, state, width, variant, loading && "loading")}
+  class={twMerge(
+    "btn",
+    size,
+    state,
+    width,
+    variant,
+    roundedStyle.get(rounded),
+    loading && "loading"
+  )}
   {disabled}
-  data-hs-remove-element={dataHsRemoveElement}
   type="button"
+  {...$$restProps}
 >
   {#if loading}
     <Loader />
